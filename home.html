@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Wedding Of</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body class="bg-white">
+
+  <!-- ================= HERO ================= -->
+  <section class="relative w-full max-w-[430px] mx-auto bg-[#fffbef] overflow-visible">
+
+    <!-- HERO IMAGE -->
+    <div class="relative overflow-hidden rounded-1xl ">
+
+      <img src="assets/home1.png" class="w-full h-[65vh] object-cover scale-105" alt="">
+
+      <!-- GRADIENT -->
+      <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/40"></div>
+
+      <!-- BOKEH PARTICLES -->
+      <div class="bokeh-layer absolute inset-0 pointer-events-none"></div>
+
+    </div>
+
+
+
+    <!-- CONTENT -->
+    <div class="relative bg-[#fffbef] text-center px-4 pt-20 pb-36 -mt-10 z-20">
+
+      <img src="assets/ornamen4.png" class="absolute top-20 left-0 w-48 opacity-80" data-item>
+      <img src="assets/ornamen2.png" class="absolute bottom-20 right-0 w-48 opacity-50" data-item>
+
+      <p class="text-xs tracking-widest text-gray-500 mb-3" data-item>
+        THE WEDDING OF
+      </p>
+
+      <h2 class="script text-6xl text-[#1c2b4a] mb-7" data-item>
+        Neli & Asep
+      </h2>
+
+      <div class="flex justify-center gap-3 mb-6">
+        <div class="bg-[#e9d7c7] px-4 py-3 rounded-xl w-16" data-item>
+          <p id="days">00</p>
+          <p class="text-[11px]">Hari</p>
+        </div>
+        <div class="bg-[#e9d7c7] px-4 py-3 rounded-xl w-16" data-item>
+          <p id="hours">00</p>
+          <p class="text-[11px]">Jam</p>
+        </div>
+        <div class="bg-[#e9d7c7] px-4 py-3 rounded-xl w-16" data-item>
+          <p id="minutes">00</p>
+          <p class="text-[11px]">Menit</p>
+        </div>
+        <div class="bg-[#e9d7c7] px-4 py-3 rounded-xl w-16" data-item>
+          <p id="seconds">00</p>
+          <p class="text-[11px]">Detik</p>
+        </div>
+      </div>
+
+      <p class="text-sm mb-6" data-item>
+        Kamis, 15 Januari 2026
+      </p>
+
+      <button id="saveDateBtn" class="bg-[#e9d7c7] px-6 py-3 rounded-full text-sm font-semibold" data-item>
+        📅 Save The Date
+      </button>
+    </div>
+
+    <!-- SVG WAVE -->
+    <!-- SVG TRANSITION FIX -->
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-30 pointer-events-none translate-y-6">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#010b2c" fill-opacity="0.30"
+          d="M 0 126 L 0 86.99496272527176 C 144 86.99496272527176 144 138.69940700280867 288 138.69940700280867 C 432 138.69940700280867 432 132.46986723657636 576 132.46986723657636 C 720 132.46986723657636 720 104.14017972014958 864 104.14017972014958 C 1008 104.14017972014958 1008 96.66716075794905 1152 96.66716075794905 C 1296 96.66716075794905 1296 99.06846990015788 1440 99.06846990015788 C 1440 99.06846990015788 1440 320 1440 320 L 1440 320 L 0 320 Z">
+        </path>
+        <path fill="#010b2c" fill-opacity="0.55"
+          d="M 0 166 L 0 164.9815748830989 C 144 164.9815748830989 144 154.68822165726004 288 154.68822165726004 C 432 154.68822165726004 432 129.4451180305617 576 129.4451180305617 C 720 129.4451180305617 720 139.31730474973557 864 139.31730474973557 C 1008 139.31730474973557 1008 129.7968721299551 1152 129.7968721299551 C 1296 129.7968721299551 1296 127.02407832862731 1440 127.02407832862731 C 1440 127.02407832862731 1440 320 1440 320 L 1440 320 L 0 320 Z">
+        </path>
+        <path fill="#010b2c" fill-opacity="1.00"
+          d="M 0 206 L 0 178.8631523389892 C 144 178.8631523389892 144 199.13225008131516 288 199.13225008131516 C 432 199.13225008131516 432 151.27039094944558 576 151.27039094944558 C 720 151.27039094944558 720 185.99321411691585 864 185.99321411691585 C 1008 185.99321411691585 1008 159.29991102211272 1152 159.29991102211272 C 1296 159.29991102211272 1296 195.7105799156964 1440 195.7105799156964 C 1440 195.7105799156964 1440 320 1440 320 L 1440 320 L 0 320 Z">
+        </path>
+      </svg>
+    </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= MEMPELAI + CERITA ================= -->
+  <section class="relative w-full max-w-[430px] mx-auto bg-[#010b2c] text-[#f3e8d8] overflow-hidden">
+
+    <img src="assets/ornamen1.png" class="absolute top-20 left-0 w-48 opacity-80" data-item>
+    <img src="assets/ornamen2.png" class="absolute bottom-20 right-0 w-48 opacity-50" data-item>
+
+    <div class="relative px-6 py-20 text-center">
+
+      <!-- MEMPELAI -->
+      <h3 class="script text-2xl mb-4" data-item>Assalamu’alaikum Wr. Wb.</h3>
+      <p class="text-sm mb-10" data-item>Tanpa mengurangi rasa hormat, kami mengundang
+        Bapak/Ibu/Saudara/i serta kerabat sekalian untuk menghadiri
+        acara pernikahan kami:</p>
+
+      <div class="bride-block" data-item>
+        <img src="assets/wanita.png" class="bride-photo">
+        <h4 class="script text-2xl">Neli Syifa Rahnayani S.Pd</h4>
+        <p class="text-xs mb-6">Putri pertama dari Bapak Rahmat Ali & Ibu Ina Herlina</p>
+      </div>
+
+      <div class="script text-4xl my-6" data-item=>&</div>
+
+      <div class="bride-block" data-item>
+        <img src="assets/pria.png" class="bride-photo">
+        <h4 class="script text-2xl">Asep Saputra S.E</h4>
+        <p class="text-xs">Putra ketiga dari Alm Bapak Ade Sutarjo & Ibu Aan</p>
+      </div>
+
+      <!-- CERITA -->
+      <div class="mt-20">
+        <h3 class="script text-3xl mb-10" data-item>Perjalanan Cerita Kami</h3>
+
+        <div class="relative mx-auto max-w-[340px] 
+         rounded-[22px] p-[1px] 
+         bg-[#d8c3a5] mb-6" data-item>
+          <div class="rounded-[21px] overflow-hidden">
+            <img src="assets/cerita.png" class="w-full object-cover" alt="Cerita Kami" />
+          </div>
+        </div>
+
+
+        <div class="mb-12">
+          <h4 class="script text-2xl mb-4" data-item>Awal Cerita</h4>
+          <p class="text-sm" data-item> Berawal dari sebuah sapa dari grup mahasiswa,memang jarak pernah memisahkan
+            tapi tidak
+            menghalang untuk
+            berlanjut pada pertemuan .Dengan kehendak-Nya dari percakapan sederhana, tumbuh keyakinan untuk melangkah
+            bersama.</p>
+        </div>
+
+        <div class="mb-12">
+          <h4 class="script text-2xl mb-4" data-item>Lamaran</h4>
+          <p class="text-sm" data-item> Hingga pada akhirnya, kami meneguhkan niat dan melaksanakan pertunangan pada
+            16 Desember
+            2024,
+            sebagai awal dari langkah yang lebih pasti.</p>
+        </div>
+
+        <div>
+          <h4 class="script text-2xl mb-4" data-item>Pernikahan</h4>
+          <p class="text-sm" data-item> Dan dengan penuh syukur, kami akan mengikat janji suci pernikahan
+            pada 15 Januari 2026,sebagai awal perjalanan hidup bersama.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="relative w-full max-w-[430px] mx-auto bg-[#fffbef] overflow-hidden pt-12 pb-32 px-4">
+    <img src="assets/ornamen4.png" class="absolute top-20 left-0 w-48 opacity-80" data-item>
+    <img src="assets/ornamen5.png" class="absolute bottom-20 right-0 w-48 opacity-50" data-item>
+
+
+    <div class="space-y-10">
+
+      <!-- AKAD -->
+      <div data-item class="mx-auto w-full bg-[#010b2c] 
+             rounded-[32px] px-6 py-10 text-center shadow-xl">
+        <h2 class="script text-4xl text-[#d8c3a5] mb-6">
+          Akad Nikah
+        </h2>
+
+        <p class="mb-4 text-base text-[#f3e8d8]" data-item>
+          Kamis, 15 Januari 2026
+        </p>
+
+        <p class="mb-6 text-base text-[#f3e8d8]" data-item>
+          Pukul : <span class="font-medium">08.30 WIB</span>
+        </p>
+
+        <div class="w-16 h-[1px] bg-[#d8c3a5] mx-auto mb-6"></div>
+
+        <p class="text-sm leading-relaxed text-[#e8dcc8]" data-item>
+          Tempat : Rumah Mempelai Wanita<br />
+          Kp. Cibeureum RT. 010 RW. 003<br />
+          Des. Nangerang Kec. Cigalontang
+        </p>
+      </div>
+
+      <!-- RESEPSI -->
+      <div data-item class="mx-auto w-full bg-[#010b2c] 
+             rounded-[32px] px-6 py-10 text-center shadow-xl">
+        <h2 class="script text-4xl text-[#d8c3a5] mb-6">
+          Resepsi
+        </h2>
+
+        <p class="mb-4 text-base text-[#f3e8d8]" data-item>
+          Kamis, 15 Januari 2026
+        </p>
+
+        <p class="mb-6 text-base text-[#f3e8d8]" data-item>
+          Pukul : <span class="font-medium">11.00 WIB</span>
+        </p>
+
+        <div class="w-16 h-[1px] bg-[#d8c3a5] mx-auto mb-6"></div>
+
+        <p class="text-sm leading-relaxed text-[#e8dcc8]" data-item>
+          Tempat : Rumah Mempelai Wanita<br />
+          Kp. Cibeureum RT. 010 RW. 003<br />
+          Des. Nangerang Kec. Cigalontang
+        </p>
+      </div>
+
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none translate-y-2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#010b2c" fill-opacity="0.30"
+          d="M 0 126 L 0 86.99496272527176 C 144 86.99496272527176 144 138.69940700280867 288 138.69940700280867 C 432 138.69940700280867 432 132.46986723657636 576 132.46986723657636 C 720 132.46986723657636 720 104.14017972014958 864 104.14017972014958 C 1008 104.14017972014958 1008 96.66716075794905 1152 96.66716075794905 C 1296 96.66716075794905 1296 99.06846990015788 1440 99.06846990015788 C 1440 99.06846990015788 1440 320 1440 320 L 1440 320 L 0 320 Z">
+        </path>
+        <path fill="#010b2c" fill-opacity="0.55"
+          d="M 0 166 L 0 164.9815748830989 C 144 164.9815748830989 144 154.68822165726004 288 154.68822165726004 C 432 154.68822165726004 432 129.4451180305617 576 129.4451180305617 C 720 129.4451180305617 720 139.31730474973557 864 139.31730474973557 C 1008 139.31730474973557 1008 129.7968721299551 1152 129.7968721299551 C 1296 129.7968721299551 1296 127.02407832862731 1440 127.02407832862731 C 1440 127.02407832862731 1440 320 1440 320 L 1440 320 L 0 320 Z">
+        </path>
+        <path fill="#010b2c" fill-opacity="1.00"
+          d="M 0 206 L 0 178.8631523389892 C 144 178.8631523389892 144 199.13225008131516 288 199.13225008131516 C 432 199.13225008131516 432 151.27039094944558 576 151.27039094944558 C 720 151.27039094944558 720 185.99321411691585 864 185.99321411691585 C 1008 185.99321411691585 1008 159.29991102211272 1152 159.29991102211272 C 1296 159.29991102211272 1296 195.7105799156964 1440 195.7105799156964 C 1440 195.7105799156964 1440 320 1440 320 L 1440 320 L 0 320 Z">
+        </path>
+      </svg>
+    </div>
+  </section>
+  <!-- ================= GALERI + AMPLOP ================= -->
+  <section class="relative w-full max-w-[430px] mx-auto bg-[#010b2c] text-[#f3e8d8] overflow-hidden px-5 pt-32 pb-16">
+    <img src="assets/ornamen3.png" class="absolute top-0 left-0 w-48 opacity-80" data-item>
+    <img src="assets/ornamen4.png" class="absolute bottom-20 right-0 w-48 opacity-50" data-item>
+
+    <!-- GALLERY -->
+    <h2 class="script text-3xl mb-10 text-center" data-item>Gallery</h2>
+
+    <p class="text-sm text-gray-300 text-center italic leading-relaxed mb-12 px-2" data-item>
+      Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri,
+      agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.
+      Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.
+      <br>
+      <span class="not-italic font-semibold block mt-3" data-item>
+        (QS. Ar-Ruum: 21)
+      </span>
+    </p>
+
+    <div class="grid grid-cols-4 gap-4 px-2 pb-32">
+
+      <!-- ===== ATAS ===== -->
+
+      <!-- Portrait besar (KIRI) -->
+      <div class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-lg" data-item>
+        <img src="assets/p1.png" class="w-full h-full object-cover aspect-[3/4]">
+      </div>
+
+      <!-- Landscape kecil (KANAN ATAS) -->
+      <div class="col-span-2 rounded-2xl overflow-hidden shadow-lg" data-item>
+        <img src="assets/p2.png" class="w-full h-full object-cover aspect-[16/9]">
+      </div>
+
+      <!-- Portrait kecil (KANAN BAWAH) -->
+      <div class="col-span-2 rounded-2xl overflow-hidden shadow-lg" data-item>
+        <img src="assets/p6.png" class="w-full h-full object-cover aspect-[3/4]">
+      </div>
+
+      <!-- Landscape lebar -->
+      <div class="col-span-4 rounded-2xl overflow-hidden shadow-lg" data-item>
+        <img src="assets/p4.png" class="w-full h-full object-cover aspect-[16/9]">
+      </div>
+
+      <!-- ===== BAWAH (DIBALIK / MIRROR) ===== -->
+
+      <!-- Landscape kecil (KIRI ATAS) -->
+      <div class="col-span-2 col-start-1 rounded-2xl overflow-hidden shadow-lg" data-item>
+        <img src="assets/p7.png" class="w-full h-full object-cover aspect-[16/9]">
+      </div>
+
+      <!-- Portrait besar (KANAN) -->
+      <div class="col-span-2 row-span-2 col-start-3 rounded-2xl overflow-hidden shadow-lg" data-item>
+        <img src="assets/p5.png" class="w-full h-full object-cover aspect-[3/4]">
+      </div>
+
+      <!-- Portrait kecil (KIRI BAWAH) -->
+      <div class="col-span-2 col-start-1 rounded-2xl overflow-hidden shadow-lg" data-item>
+        <img src="assets/p3.png" class="w-full h-full object-cover aspect-[3/4]">
+      </div>
+
+      <!-- Landscape lebar -->
+      <div class="col-span-4 rounded-2xl overflow-hidden shadow-lg" data-item>
+        <img src="assets/p8.png" class="w-full h-full object-cover aspect-[16/9]">
+      </div>
+
+    </div>
+
+
+    </div>
+
+    <!-- AMPLOP -->
+    <div class="relative bg-[#fffbef] text-black rounded-3xl px-6 py-16 overflow-hidden">
+
+      <img src="assets/ornamen4.png" class="absolute top-20 left-0 w-48 opacity-80" data-item>
+      <img src="assets/ornamen5.png" class="absolute bottom-20 right-0 w-48 opacity-50" data-item>
+
+      <h2 class="script text-3xl mb-6 text-center" data-item>Amplop Digital</h2>
+      <p class="text-sm text-center mb-8" data-item>Doa restu Anda merupakan karunia yang sangat berarti bagi kami,
+        dan jika memberi adalah ungkapan tanda kasih, Anda dapat memberi kado secara cashless.</p>
+
+      <div class="flex justify-center">
+        <button id="toggleGift" class="bg-[#e6c9a8] px-6 py-3 rounded-full" data-item>
+          🎁 Kirim Hadiah
+        </button>
+      </div>
+
+      <div id="giftContent" class="mt-10 space-y-6 overflow-hidden max-h-0 opacity-0 translate-y-4
+       transition-all duration-700 ease-in-out">
+
+        <!-- CARD 1 -->
+        <div class="flex justify-center" data-item>
+          <div class="relative bg-white rounded-2xl shadow-xl w-[360px] h-[160px] px-6">
+
+            <div class="absolute top-4 right-4">
+              <img src="assets/bri.png" class="w-14 h-auto" alt="BRI">
+            </div>
+
+            <p class="rekening font-mono text-[17px] tracking-widest text-gray-800 absolute left-6 top-[40px]">
+              436401017792535
+            </p>
+
+            <p class="absolute left-6 top-[70px] text-[11px] uppercase tracking-wide text-gray-500">
+              NELI SYIFA RAHMAYANI
+            </p>
+
+            <button class="copy-btn absolute bottom-4 right-6 bg-gray-400 text-[11px] px-3 py-1.5 rounded-md">
+              📄 Copy
+            </button>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="flex justify-center" data-item>
+          <div class="relative bg-white rounded-2xl shadow-xl w-[360px] h-[160px] px-6">
+
+            <div class="absolute top-4 right-4">
+              <img src="assets/dana.png" class="w-14 h-auto" alt="BRI">
+            </div>
+            <p class="rekening font-mono text-[17px] tracking-widest text-gray-800 absolute left-6 top-[40px]">
+              085861260482
+            </p>
+
+            <p class="absolute left-6 top-[70px] text-[11px] uppercase tracking-wide text-gray-500">
+              NELI SYIFA RAHMAYANI
+            </p>
+
+            <button class="copy-btn absolute bottom-4 right-6 bg-gray-400 text-[11px] px-3 py-1.5 rounded-md">
+              📄 Copy
+            </button>
+          </div>
+        </div>
+
+        <!-- HADIAH FISIK -->
+        <div class="bg-white rounded-2xl p-6 shadow-xl text-gray-700 text-center" data-item>
+          <h3 class="font-semibold text-gray-800 mb-3">
+            Kirim Hadiah
+          </h3>
+          <p class="text-sm leading-relaxed text-gray-600">
+            Nama Penerima : Neli Syifa Rahmayani<br>
+            Nomor HP : 085861260482<br>
+            Kp. Cibeureum RT. 010 RW. 003<br>
+            Des. Nanggerang<br>
+            Kec. Cigalontang Kab. Tasikmalaya
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LOKASI ================= -->
+  <section class="relative w-full max-w-[430px] mx-auto
+       bg-[#010b2c] text-[#f3e8d8] overflow-hidden">
+
+    <img src="assets/ornamen3.png" class="absolute top-0 left-0 w-48 opacity-70 pointer-events-none" data-item>
+    <img src="assets/ornament-right.png" class="absolute bottom-0 right-0 w-24 opacity-70 pointer-events-none"
+      data-item>
+
+    <div class="relative px-6 py-16 text-center">
+
+      <h3 class="script text-3xl mb-4" data-item>Lokasi Acara</h3>
+
+      <p class="text-sm text-[#e8dcc8] leading-relaxed mb-8" data-item>
+        Dengan penuh rasa syukur, acara pernikahan kami akan
+        diselenggarakan di lokasi berikut:
+      </p>
+
+      <div class="mb-6" data-item>
+        <p class="font-semibold text-lg">Rumah Mempelai Wanita</p>
+        <p class="text-xs text-[#d8c3a5] mt-1">
+          Jl. Raya Cigalontang, Kp.Cibeureum, Desa.Nangerang,
+          Kec.Cigalontang, Kab.Tasikmalaya Regency, West Java 46463
+        </p>
+      </div>
+
+      <div class="rounded-xl overflow-hidden border border-[#d8c3a5] mb-6" data-item>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d415.9225410819254!2d108.07193287606546!3d-7.360134038601981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smadrasah%20mathlabul%20hidayah!5e0!3m2!1sen!2sid!4v1767631137276!5m2!1sen!2sid"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+          width="100%" height="300" style="border:0;" loading="lazy"></iframe>
+      </div>
+
+      <a href="https://maps.app.goo.gl/j3pJvcrnj8PQLpdt8" target="_blank" class="inline-flex items-center gap-2
+      border border-[#ffd1a8]
+      text-[#ffd1a8]
+      px-6 py-2 rounded-full text-sm">
+        📍 Buka di Google Maps
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ================= UCAPAN ================= -->
+  <section class="w-full max-w-[430px] mx-auto px-6 py-16 bg-[#fffbef]" data-animate>
+
+    <h2 class="script text-5xl mb-10 text-center" data-item>
+      Ucapkan Sesuatu
+    </h2>
+
+    <p class="text-center text-sm text-gray-500 mb-4" data-item>
+      Berikan Ucapan & Doa Restu
+    </p>
+
+    <div class="flex justify-center gap-4 mb-6" data-item>
+      <div id="hadirBox" class="w-[140px] py-3 rounded-xl bg-green-100 text-center">
+        <p id="hadirCount" class="text-xl font-semibold text-green-700">0</p>
+        <p class="text-sm text-green-700">Hadir</p>
+      </div>
+      <div id="tidakBox" class="w-[140px] py-3 rounded-xl bg-red-100 text-center">
+        <p id="tidakCount" class="text-xl font-semibold text-red-600">0</p>
+        <p class="text-sm text-red-600">Tidak Hadir</p>
+      </div>
+    </div>
+
+    <div class="space-y-4 mb-10" data-item>
+      <input id="nama" type="text" placeholder="Nama" class="w-full border rounded-lg px-4 py-3 text-sm">
+      <textarea id="ucapan" rows="3" placeholder="Ucapan" class="w-full border rounded-lg px-4 py-3 text-sm"></textarea>
+      <select id="status" class="w-full border rounded-lg px-4 py-3 text-sm">
+        <option value="">Konfirmasi Kehadiran</option>
+        <option value="hadir">Hadir</option>
+        <option value="tidak">Tidak Hadir</option>
+      </select>
+      <button onclick="kirimUcapan()" class="w-full bg-[#ffd1a8] py-3 rounded-lg font-semibold">
+        KIRIM
+      </button>
+    </div>
+
+    <div id="commentList" class="space-y-6"></div>
+
+
+  </section>
+
+
+  <!-- AUDIO -->
+  <audio id="bgMusic" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="musicToggle" class="fixed bottom-6 right-6 z-50
+  w-12 h-12 rounded-full
+  bg-[#ffd1a8] text-[#1c2b4a]
+  flex items-center justify-center shadow-lg">
+    ⏸
+  </button>
+
+<footer class="w-full max-w-[430px] mx-auto bg-[#fffbef] py-4">
+  <div class="mx-auto w-fit px-4 py-2 rounded-full
+              bg-[#010b2c]/5 backdrop-blur-sm">
+    <p class="text-[10px] tracking-widest text-[#010b2c]/60">
+     designed by melqi
+
+    </p>
+  </div>
+</footer>
+
+
+
+
+  <script src="logic/logic.js"></script>
+
+</body>
+
+</html>

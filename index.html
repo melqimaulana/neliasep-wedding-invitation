@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Wedding Of</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap"
+    rel="stylesheet">
+
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .script {
+      font-family: 'Great Vibes', cursive;
+    }
+
+    /* ===== TRANSITION COVER ===== */
+    .cover-exit {
+      animation: coverFade 0.8s ease forwards;
+    }
+
+    @keyframes coverFade {
+      from {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      to {
+        opacity: 0;
+        transform: scale(1.05);
+      }
+    }
+
+    .content-exit {
+      animation: contentDown 0.6s ease forwards;
+    }
+
+    @keyframes contentDown {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      to {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+    }
+
+    /* ===== BUTTON HOVER EFFECT ===== */
+    .invite-btn {
+      position: relative;
+      overflow: hidden;
+      transform: translateZ(0);
+    }
+
+    /* naik + glow */
+    .invite-btn:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow:
+        0 12px 25px rgba(255, 255, 255, 0.25),
+        0 0 0 2px rgba(255, 255, 255, 0.15);
+    }
+
+    /* shimmer */
+    .invite-btn::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 120%;
+      height: 100%;
+      background: linear-gradient(120deg,
+          transparent,
+          rgba(255, 255, 255, 0.5),
+          transparent);
+      transition: all 0.6s ease;
+    }
+
+    .invite-btn:hover::after {
+      left: 120%;
+    }
+
+    /* active (saat diklik) */
+    .invite-btn:active {
+      transform: scale(0.96);
+    }
+
+    
+[data-item] {
+  opacity: 0;
+  transform: translateY(44px);
+  transition:
+    opacity 1.30s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.30s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+[data-item].show {
+  opacity: 1;
+  transform: translateY(0);
+}
+  </style>
+
+</head>
+
+<body class="bg-white">
+
+  <!-- COVER -->
+  <section id="cover" class="relative w-full max-w-[430px] min-h-screen mx-auto overflow-hidden">
+
+    <!-- FOTO PENGANTIN -->
+    <img src="assets/cover.png" alt="Foto Pengantin" class="absolute inset-0 w-full h-full object-cover" data-item />
+
+    <!-- GRADASI (TENGAH → BAWAH PEKAT, ATAS TRANSPARAN) -->
+    <div class="absolute inset-0 bg-gradient-to-t 
+      from-[#213448]/100 
+      via-[#213448]/95 
+      via-35% 
+      to-transparent" data-item>
+    </div>
+
+
+    <!-- CONTENT -->
+    <div id="coverContent" class="absolute inset-x-0 bottom-[18%] z-10 flex flex-col
+         items-center text-center text-white px-6">
+
+
+      <p data-item class="text-[11px] tracking-[0.4em] mb-3 opacity-90" >
+        THE WEDDING OF
+      </p>
+
+      <h1 data-item class="script text-5xl leading-none mb-5">
+        Neli & Asep
+      </h1>
+
+      <p data-item class="text-sm mb-1 opacity-90">
+        Kepada Bapak/Ibu/Saudara/i
+      </p>
+
+      <!-- NAMA TAMU VIA LINK -->
+      <p data-item id="namaTamu" class="text-base font-semibold mb-7">
+        Tamu Undangan ❤️
+      </p>
+
+      <!-- BUTTON -->
+      <a href="home.html" id="openInvitation" class="invite-btn inline-flex items-center gap-2
+         bg-[#ffd1a8] text-[#0b1324]
+         px-7 py-3 rounded-full
+         text-sm font-semibold
+         shadow-xl
+         transition" data-item>
+        ✉️ Buka Undangan
+      </a>
+
+
+    </div>
+
+  </section>
+
+  <script>
+    // ===== NAMA TAMU =====
+    const params = new URLSearchParams(window.location.search);
+    const nama = params.get("to");
+
+    if (nama) {
+      document.getElementById("namaTamu").innerText =
+        nama.replace(/\+/g, " ");
+    }
+
+    // ===== TRANSISI COVER =====
+    const btn = document.getElementById("openInvitation");
+    const cover = document.getElementById("cover");
+    const content = document.getElementById("coverContent");
+
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // flag autoplay musik
+      localStorage.setItem("playMusic", "yes");
+
+      // animasi keluar
+      cover.classList.add("cover-exit");
+      content.classList.add("content-exit");
+
+      // delay pindah halaman
+      setTimeout(() => {
+        window.location.href = btn.getAttribute("href");
+      }, 700);
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("section").forEach(section => {
+    const items = section.querySelectorAll("[data-item]");
+    items.forEach((item, i) => {
+      item.style.transitionDelay = `${i * 0.10}s`;
+    });
+  });
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle("show", entry.isIntersecting);
+      });
+    },
+    {
+      threshold: 0.15,
+      rootMargin: "0px 0px -12% 0px"
+    }
+  );
+
+  document.querySelectorAll("[data-item]").forEach(item =>
+    observer.observe(item)
+  );
+});
+
+  </script>
+
+</body>
+
+</html>
