@@ -4,7 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Wedding Of</title>
+  <meta property="og:title" content="The Wedding Of Neli & Asep">
+  <meta property="og:title" content="The Wedding Of A & B">
+  <meta property="og:description" content="Kami mengundang Anda untuk hadir di hari bahagia kami">
+  <meta property="og:image" content="https://neliasep-wedding-invitation.netlify.app/assets/cover.png">
+  <meta property="og:url" content="https://neliasep-wedding-invitation.netlify.app/">
+  <meta property="og:type" content="website">
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -95,20 +100,20 @@
       transform: scale(0.96);
     }
 
-    
-[data-item] {
-  opacity: 0;
-  transform: translateY(44px);
-  transition:
-    opacity 1.30s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 1.30s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: transform, opacity;
-}
 
-[data-item].show {
-  opacity: 1;
-  transform: translateY(0);
-}
+    [data-item] {
+      opacity: 0;
+      transform: translateY(44px);
+      transition:
+        opacity 1.30s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 1.30s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: transform, opacity;
+    }
+
+    [data-item].show {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 
 </head>
@@ -135,7 +140,7 @@
          items-center text-center text-white px-6">
 
 
-      <p data-item class="text-[11px] tracking-[0.4em] mb-3 opacity-90" >
+      <p data-item class="text-[11px] tracking-[0.4em] mb-3 opacity-90">
         THE WEDDING OF
       </p>
 
@@ -199,29 +204,29 @@
     });
 
     document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll("section").forEach(section => {
-    const items = section.querySelectorAll("[data-item]");
-    items.forEach((item, i) => {
-      item.style.transitionDelay = `${i * 0.10}s`;
-    });
-  });
-
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        entry.target.classList.toggle("show", entry.isIntersecting);
+      document.querySelectorAll("section").forEach(section => {
+        const items = section.querySelectorAll("[data-item]");
+        items.forEach((item, i) => {
+          item.style.transitionDelay = `${i * 0.10}s`;
+        });
       });
-    },
-    {
-      threshold: 0.15,
-      rootMargin: "0px 0px -12% 0px"
-    }
-  );
 
-  document.querySelectorAll("[data-item]").forEach(item =>
-    observer.observe(item)
-  );
-});
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            entry.target.classList.toggle("show", entry.isIntersecting);
+          });
+        },
+        {
+          threshold: 0.15,
+          rootMargin: "0px 0px -12% 0px"
+        }
+      );
+
+      document.querySelectorAll("[data-item]").forEach(item =>
+        observer.observe(item)
+      );
+    });
 
   </script>
 
